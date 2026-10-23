@@ -135,12 +135,10 @@ public class MainMenuController {
 
     private void handleInitializeTest() {
         TableView<Bank> bank = new TableView<>();
-        bank.getItems().add(new Bank("123","321"));
-        customerList.getItems().add(new Customer("Wilson", bank));
-        TableView<Bank> bank2 = new TableView<>();
-        bank2.getItems().add(new Bank("321","123"));
-        bank2.getItems().add(new Bank("592","123"));
-        customerList.getItems().add(new Customer("Teste", bank2));
+        bank.getItems().add(new Bank("1220421-8","750"));
+        bank.getItems().add(new Bank("152892-0","65"));
+        bank.getItems().add(new Bank("1000947-7","16.50"));
+        customerList.getItems().add(new Customer("Wilson Salles Junior", bank));
     }
 
     public void transfer(String accountNumber, String text, Bank selectedItem, String toName) throws Exception {
