@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boreal.javabank.controller.NewCustomerController">
+   <children>
+      <Label layoutX="14.0" layoutY="7.0" text="Nome do cliente" />
+      <TextField fx:id="nameField" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="313.0" />
+      <Button layoutX="334.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleSaveCustomer" text="Salvar" />
+   </children>
+</Pane>

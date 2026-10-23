@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boreal.javabank.controller.MainMenuController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" onAction="#handleNewCustomer" text="Novo Cliente" />
+        </items>
+      </ToolBar>
+   </top>
+   <left>
+      <ListView fx:id="customerList" onMouseClicked="#handleSelectCustomer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <TableView fx:id="auditTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="auditName" prefWidth="75.0" text="Nome do Cliente" />
+          <TableColumn fx:id="auditDescription" prefWidth="75.0" text="Descrição da transação" />
+            <TableColumn fx:id="auditValue" prefWidth="75.0" text="Valor da transação" />
+            <TableColumn fx:id="auditStatus" prefWidth="75.0" text="Situação" />
+            <TableColumn fx:id="auditAmount" prefWidth="75.0" text="Saldo Atual" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <VBox fx:id="bottomBox" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar VBox.vgrow="ALWAYS">
+              <items>
+                <Button mnemonicParsing="false" onAction="#handleNewBank" text="Nova conta bancária" />
+                  <Button mnemonicParsing="false" onAction="#handleTransfer" text="Transferir" />
+                  <Label fx:id="customerLabel" text="NOME DO CLIENTE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" text="Excluir Cliente" textFill="RED">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+              </items>
+            </ToolBar>
+            <TableView fx:id="bankTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="accountNumber" minWidth="0.0" prefWidth="444.0" text="Conta" />
+                <TableColumn fx:id="accountValue" maxWidth="200.0" minWidth="100.0" prefWidth="200.0" text="Saldo" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
